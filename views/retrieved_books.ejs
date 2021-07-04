@@ -1,0 +1,36 @@
+<%- include('./head'); %>
+<section>
+ 
+    <%- include('./nav'); %>
+    <form  class='title' method="PATCH">
+        <h2>Retrieved Books</h2>
+        <!-- <button>Books</button> -->
+
+
+
+
+
+        <br>
+        <br>
+        <ul>
+        <% for( var i = 0; i < Books.length; i++) { %>
+            <li>
+                <span><%= Books[i].title %> </span>
+                <br>
+                <span><%= Books[i].author %></span>
+            </li>
+            <br>
+            <% } %>
+            <br>
+        </ul>
+    </form>
+<div>
+
+</div>
+  
+
+</section>
+
+
+
+<%- include('./footer'); %>

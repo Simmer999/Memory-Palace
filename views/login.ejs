@@ -1,0 +1,29 @@
+<section>
+<h1 class='title'> Login </h1>
+<%- include ('./partials/messages') %>
+<div class='formContainer'>
+<form action="/users/login" method="POST">
+<div>
+<label for="email">Email</label>
+<input
+type="email"
+name="email"
+placeholder="Enter Email"
+/>
+</div>
+<div>
+    <label for="password">Password</label>
+    <input
+      type="password"
+      name="password"
+      placeholder="Enter Password"
+    />
+  
+</div>
+<button type="submit" class="btn btn-primary btn-block">Login</button>
+   
+</form>
+<br>
+<p>No account yet? <a class='links' href="/users/register">  Register</a></p>
+</div>
+</section>

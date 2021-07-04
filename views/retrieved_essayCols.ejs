@@ -1,0 +1,33 @@
+<%- include('./head'); %>
+
+<section>
+    <%- include('./nav'); %>
+  
+
+    <form   class="title" method="PATCH">
+        <h2>Retrieved Essay Collections</h2>
+        <button>Collections</button>
+        <br>
+        <br>
+        <ul>
+        <% for( var i = 0; i < essayCollections.length; i++) { %>
+            <li class="essayCollections">
+                <span><%= essayCollections[i].title %> </span>
+                <br>
+                <span><%= essayCollections[i].author %></span>
+            </li>
+            <br>
+            <% } %>
+            <br>
+        </ul>
+    </form>
+<div>
+
+</div>
+  
+
+</section>
+
+
+
+<%- include('./footer'); %>

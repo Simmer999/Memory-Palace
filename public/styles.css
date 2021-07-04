@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #bbbbbb;
+    background-color: #570f0f;
+    height: 100vh;
+}
+section {
+    border-radius: 40px;
+    height: 100%;
+    display: grid;
+    background-color: #222222;
+}
+.title {
+    margin: auto;
+    margin-bottom: 30px;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+.formContainer {
+    margin: auto;
+    margin-top: 30px;
+    width: 325px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+.links {
+    color: white
+}
