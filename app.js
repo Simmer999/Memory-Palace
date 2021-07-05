@@ -36,13 +36,13 @@ const booksRoutes = require('./api/routes/books')
 const moviesRoutes = require('./api/routes/movies')
 const essayRoutes = require('./api/routes/essayCols')
 const poemsRoutes = require('./api/routes/poems')
-// const userRoutes = require('./api/routes/usersx')
+const userRoutes = require('./api/routes/users')
 
 app.use('/', booksRoutes)
 app.use('/', moviesRoutes)
 app.use('/', essayRoutes)
 app.use('/', poemsRoutes)
-// app.use('/', userRoutes)
+app.use('/', userRoutes)
 //========================================================= Route imports.
 
 
@@ -83,10 +83,29 @@ app.use('/users',require('./api/routes/users'));
 //======================================================= Routes from "module.exports = router" files.
 
 
+//======================================================= Experimentation
+const memoryPalace = process.env.DB
+
+app.get('/', (req, res) => {
+    db.find(req.memoryPalace.users)
+    .toArray()
+    .then(results => {
+        res.send('Hello World')
+        console.log(req.body)
+    })
+})
+
+// app.get('/', function (req, res) {
+//     res.send('root')
+//   })
+
+
+
+//======================================================= Experimentation
 
 
 
 
+module.exports = app
 
-
-app.listen(5555); 
+// app.listen(5555); 
