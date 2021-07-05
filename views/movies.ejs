@@ -1,35 +1,22 @@
-
-
-<%- include('./head'); %>
-
-    <section>
-      <%- include('./nav'); %>
- 
-
-        <div class='title' style='width: 60%'>
-            <ul class="quotes">
-               <!-- Loop through quotes -->
-               <% for(var i = 0; i < entries.length; i++) {%>
-                 <li class="quote">
-                   <!-- These are entries from the 'movies' collection> -->
-                   <span><%= entries[i].title%></span>
-                   <br>
-                   : <span><%= entries[i].year%></span>
-                   <br>
-                  : <span><%= entries[i].plot%></span>
-                  </li>
+<%- include('./partials/head'); %>
+  <section>
+    <%- include('./partials/nav'); %>
+      <div class='title' style='width: 60%'>
+          <ul class="quotes">
+              <!-- Loop through quotes -->
+              <% for(var i = 0; i < entries.length; i++) {%>
+                <li class="quote">
+                  <!-- These are entries from the 'movies' collection> -->
+                  <span><%= entries[i].title%></span>
                   <br>
-                  <!-- End -->
-               <% } %>
-             </ul>
-        </div>
-
-        <!-- <div id=div3></div>
-        <div id=div4></div> -->
-        
-    </section>
-
-    <%- include('./footer'); %>  
-  
-
-
+                  : <span><%= entries[i].year%></span>
+                  <br>
+                : <span><%= entries[i].plot%></span>
+                </li>
+                <br>
+                <!-- End -->
+              <% } %>
+            </ul>
+      </div>
+  </section>
+<%- include('./partials/footer'); %>  
