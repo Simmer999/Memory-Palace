@@ -60,26 +60,4 @@ router.post('/books', (req, res ) => {
     });
 })
 
-module.exports = router;
-
-
-
-// router.get('/:titleName', (req, res) => {
-//     res.render('new_entry')
-// })
-
-// router.patch('/:titleName', (req, res) => {
-//     res.status(201).json({
-//         message: 'Updated products.'
-//     });
-//     return res.redirect('memberPage');
-// });
-
-// mongoose.connect('mongodb+srv://simmmer:snoops22@cluster0.34ahm.mongodb.net/memoryPalace?retryWrites=true&w=majority', {
-//     useUnifiedTopology: true,
-//     useNewUrlParser: true
-// });
-// mongoose.connect('mongodb+srv://simmmer:snoops22@cluster0.34ahm.mongodb.net/memoryPalace?retryWrites=true&w=majority', {
-//     useUnifiedTopology: true,
-//     useNewUrlParser: true
-// });
+module.exports = router

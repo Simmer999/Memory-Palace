@@ -32,16 +32,16 @@ db.once('open', (callback) => {
 
 
 //========================================================= Route imports.
-const booksRoutes = require('./routes/books')
-const moviesRoutes = require('./routes/movies')
-const essayRoutes = require('./routes/essayCols')
-// const poemsRoutes = require('./api/routes/poems')
+const booksRoutes = require('./api/routes/books')
+const moviesRoutes = require('./api/routes/movies')
+const essayRoutes = require('./api/routes/essayCols')
+const poemsRoutes = require('./api/routes/poems')
 // const userRoutes = require('./api/routes/usersx')
 
 app.use('/', booksRoutes)
 app.use('/', moviesRoutes)
 app.use('/', essayRoutes)
-// app.use('/', poemsRoutes)
+app.use('/', poemsRoutes)
 // app.use('/', userRoutes)
 //========================================================= Route imports.
 
@@ -78,8 +78,8 @@ app.use((req,res,next)=> {
 
 
 //======================================================= Routes from "module.exports = router" files.
-app.use('/',require('./routes/index'));
-app.use('/users',require('./routes/users'));
+app.use('/', require('./api/routes/index'));
+app.use('/users',require('./api/routes/users'));
 //======================================================= Routes from "module.exports = router" files.
 
 
